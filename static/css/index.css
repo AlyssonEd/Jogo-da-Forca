@@ -1,0 +1,144 @@
+/* index.css */
+
+/* Reset básico para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url('../images/Design\ sem\ nome.png');
+    color: #212529;
+}
+
+header {
+    background-color: #0026ff;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: center;
+}
+
+.senai-logo {
+    max-width: 250px;
+    height: auto;
+}
+
+main {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Limita a largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o main */
+    text-align: center; /* Centraliza o texto dentro do main */
+}
+
+h1 {
+    color: #007bff;
+    margin-top: 40px;
+    margin-bottom: 20px; /* Adiciona espaçamento abaixo do título */
+}
+
+h3 {
+    color: #007bff;
+    margin-top: 30px;
+    margin-bottom: 20px; /* Adiciona espaçamento abaixo dos títulos */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem; /* Ajusta o tamanho da fonte para consistência */
+    font-weight: bold; /* Garante que o texto do título seja negrito */
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: center; /* Centraliza o texto dos parágrafos */
+}
+
+.btn-play {
+    font-size: 18px;
+    margin-top: 20px; /* Adiciona uma margem no topo do botão */
+    display: inline-block; /* Garante que o botão se comporte como um bloco inline */
+}
+
+/* Estilização do botão glow-on-hover */
+.btn-play {
+    display: inline-block; /* Garante que o botão fique centralizado */
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #0400ff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    text-align: center; /* Centraliza o texto dentro do botão */
+    line-height: 50px; /* Alinha o texto verticalmente no centro */
+}
+
+.btn-play:before {
+    content: '';
+    background: linear-gradient(45deg, #e100ff, #2600ff, #e100ff, #2600ff, #e100ff, #2600ff, #e100ff, #2600ff, #e100ff);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.btn-play:active {
+    color: #000;
+}
+
+.btn-play:active:after {
+    background: transparent;
+}
+
+.btn-play:hover:before {
+    opacity: 1;
+}
+
+.btn-play:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f6f8ff;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+footer {
+    background-color: #0011ff;
+    color: #ffffff;
+    padding: 15px 0;
+}
+
+footer .container {
+    text-align: center; /* Centraliza o texto dentro do footer */
+}
+
+footer p {
+    margin: 0;
+}

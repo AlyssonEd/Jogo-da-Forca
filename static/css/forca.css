@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../images/interrogacoes.gif'); /* Cor de fundo suave */
+    color: #343a40; /* Cor de texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo na página */
+    justify-content: flex-start; /* Alinha ao topo da página */
+    min-height: 100vh; /* Altura mínima da janela */
+    margin: 0; /* Remove margens do body */
+    padding-top: 20px; /* Adiciona espaçamento no topo */
+}
+
+
+.senai-logo {
+    max-width: 200px; /* Ajuste a largura da logo */
+}
+
+.container {
+    background-color: white; /* Fundo branco para o container */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px; /* Espaçamento interno */
+    width: 90%; /* Largura responsiva */
+    max-width: 500px; /* Largura máxima */
+}
+
+h1 {
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+#dica {
+    font-style: italic; /* Dica em itálico */
+    margin-bottom: 15px; /* Espaçamento inferior */
+}
+
+#palavra {
+    font-size: 2em; /* Tamanho da palavra maior */
+    letter-spacing: 0.3em; /* Espaçamento entre letras */
+    margin: 20px 0; /* Margens superior e inferior */
+    overflow-wrap: break-word; /* Quebra de linha se necessário */
+    text-align: center; /* Centraliza o texto */
+}
+
+#forca {
+    margin: 20px auto; /* Centraliza o boneco */
+    border: 1px solid #343a40; /* Borda ao redor do boneco */
+    width: 150px; /* Largura fixa do boneco */
+    height: 250px; /* Altura fixa do boneco */
+    position: relative; /* Para desenhar o boneco corretamente */
+    overflow: hidden; /* Garante que nada saia da área */
+}
+
+input[type="text"] {
+    width: 100%; /* Campo de texto ocupa toda a largura */
+    text-align: center; /* Centraliza texto */
+}
+
+.botões {
+    display: flex;
+    flex-direction: column; /* Coloca botões em coluna */
+    align-items: center; /* Centraliza os botões */
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+button {
+    width: 100%; /* Botões ocupam toda a largura do container */
+    margin-bottom: 10px; /* Espaçamento entre os botões */
+}
+
+footer {
+    margin-top: 20px; /* Espaçamento superior */
+    font-size: 0.9em; /* Tamanho da fonte menor */
+    color: #6c757d; /* Cor do texto do footer */
+    text-align: center; /* Centraliza o texto do footer */
+}
+
+.btn-primary {
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.btn-primary:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.btn-primary:hover:before {
+    opacity: 1;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
